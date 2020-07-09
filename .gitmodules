@@ -1,0 +1,6 @@
+[submodule "cnn_lstm_ctc_ocr"]
+	path = cnn_lstm_ctc_ocr
+	url = git@github.com:weinman/cnn_lstm_ctc_ocr.git
+[submodule "MapTextSynthesizer"]
+	path = MapTextSynthesizer
+	url = git@github.com:weinman/MapTextSynthesizer.git
