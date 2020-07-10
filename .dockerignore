@@ -1,5 +1,5 @@
-fonts
 dockerfile
 .dockerignore
 .install.sh
 .git*
+env.list

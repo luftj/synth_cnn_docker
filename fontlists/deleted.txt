@@ -1,0 +1,16 @@
+# blocky
+jsMath-cmbx10
+Vidaloka 
+
+# regular
+Century Schoolbook L
+Nimbus Mono L
+Nimbus Roman No9 L
+Pompiere
+Sue Ellen Francisco 
+URW Bookman L
+URW Gothic L
+URW Palladio L
+
+# cursive
+URW Chancery L
