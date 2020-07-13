@@ -3,3 +3,4 @@ dockerfile
 .install.sh
 .git*
 env.list
+cnn_lstm_ctc_ocr/data/model
