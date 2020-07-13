@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM nvidia/cuda:10.2-base-ubuntu18.04
 RUN apt-get update && apt-get upgrade -y
 
 # fix tzdata data enter request from pkg-config
@@ -22,7 +22,7 @@ RUN git clone --depth 1 https://github.com/google/fonts.git /root/.fonts
 RUN fc-cache -f
 
 # install tensorflow for ocr cnn
-RUN pip install tensorflow==1.14
+RUN pip install tensorflow-gpu==1.14
 
 # move files to dir
 COPY ./MapTextSynthesizer /app/MapTextSynthesizer
