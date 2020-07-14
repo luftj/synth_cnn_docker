@@ -56,6 +56,7 @@ COPY ./cnn_lstm_ctc_ocr /app/cnn_lstm_ctc_ocr
 # COPY ./requirements.txt /app/requirements.txt
 # RUN pip install -r /app/requirements.txt
 RUN apt-get install -y python-opencv
+RUN pip install pillow
 
 # copy synth config
 COPY ./fontlists /app/fontlists

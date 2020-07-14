@@ -4,3 +4,4 @@ dockerfile
 .git*
 env.list
 cnn_lstm_ctc_ocr/data/model
+images
