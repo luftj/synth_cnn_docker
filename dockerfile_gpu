@@ -66,6 +66,7 @@ COPY ./charset.py /app/cnn_lstm_ctc_ocr/src/charset.py
 # start training ocr on synth data
 WORKDIR /app/cnn_lstm_ctc_ocr/src
 COPY ./run_cnn.sh /app
+COPY ./pyval.sh /app
 ENTRYPOINT [ "bash", "/app/run_cnn.sh" ]
 # ENTRYPOINT ["python","train.py", "--nostatic_data", "--synth_config_file", "/app/config.txt"]
 CMD []
