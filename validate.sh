@@ -3,4 +3,4 @@ docker run --name cnn_synth_val -ti --rm \
     -v "$(pwd)"/images:/app/images/ \
     --entrypoint bash \
     cnn_synth \
-    pyval.sh
+    /app/pyval.sh
