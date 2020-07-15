@@ -4,4 +4,4 @@ convert *.png -resize x31 -set filename:base "%[basename]" "%[filename:base]_32.
 rm imagelist.txt
 touch imagelist.txt
 ls *_32.png > imagelist.txt
-sed 's/^/\/app\/images\//' imagelist.txt
+sed -i 's/^/\/app\/images\//' imagelist.txt
