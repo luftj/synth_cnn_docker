@@ -13,3 +13,6 @@ docker run --name cnn_synth_val -ti --rm \
     --entrypoint bash \
     cnn_synth \
     /app/pyval.sh > validate_log.txt 2>/dev/null
+
+
+python eval.py "$(cat validate_log.txt | tail -n 1)" images/ground_truth_149.txt --ignorecase
