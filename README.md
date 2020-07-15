@@ -25,4 +25,4 @@ run a test:
 To recognise some words, but the images in ./images/ and their filepaths in ./images/imagelist.txt.
 They need to have either one or three channels and be exactly 32 pixels high.
 
-` ./validate.sh `
+` ./validate.sh path/to/images`

@@ -1,5 +1,6 @@
 inputpath=$1
 cd $inputpath
+rm *_32.png
 convert *.png -resize x31 -set filename:base "%[basename]" "%[filename:base]_32.png"
 rm imagelist.txt
 touch imagelist.txt
