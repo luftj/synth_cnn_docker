@@ -7,7 +7,7 @@ import ast
 def get_number_from_filename(filename):
     output = filename.split("/")[-1]
     output = output.split(".")[0]
-    output = output.split("_")[0]
+    output = output.replace("_32","")
     return int(output)
 
 def get_ground_truth_values(filename):
@@ -69,8 +69,8 @@ if __name__ == "__main__":
     ground_truth_values = get_ground_truth_values(args.groundtruth)
     total_w_error = 0
     total_c_error = 0
-    for detection in inputs:
-        idx = get_number_from_filename(detection[0])
+    for idx,detection in enumerate(inputs):
+        # idx = get_number_from_filename(detection[0])
         detected_label = detection[1]
         ground_truth_label = ground_truth_values[idx]
         c_error = get_character_error(ground_truth_label, detected_label,args.ignorecase)
