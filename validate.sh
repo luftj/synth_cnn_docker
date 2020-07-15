@@ -12,4 +12,4 @@ docker run --name cnn_synth_val -ti --rm \
     -v "$(pwd)"/$inputpath:/app/images/ \
     --entrypoint bash \
     cnn_synth \
-    /app/pyval.sh
+    /app/pyval.sh > validate_log.txt 2>/dev/null
