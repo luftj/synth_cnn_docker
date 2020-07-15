@@ -37,8 +37,9 @@ def get_character_error(word1,word2,ignorecase):
     else:
         return levenshtein(word1,word2) / len(word2)
 
-def levenshtein(s,t):
-    s = "-"+s
+def levenshtein(s,t, cost_delins=1, cost_subst=1):
+    ''' Wagner-Fscher algorithm to compute the edit distance between two words s and t. Default cost of deletion/insertion as well as substitution is 1 '''
+    s = "-"+s # index alignment
     t = "-"+t
     d = [[0 for i in range(len(t))] for j in range(len(s))]
     for i in range(1,len(s)):
@@ -50,10 +51,10 @@ def levenshtein(s,t):
             if s[i] == t[j]:
                 cost = 0
             else:
-                cost = 1
-            d[i][j] = min(  d[i-1][j] + 1,
-                            d[i][j-1] + 1,
-                            d[i-1][j-1] + cost)
+                cost = cost_subst
+            d[i][j] = min(  d[i-1][j] + cost_delins,    # deletion
+                            d[i][j-1] + cost_delins,    # insertion
+                            d[i-1][j-1] + cost)         # substitution
     # print(*d,sep="\n")
     return d[-1][-1]
 
