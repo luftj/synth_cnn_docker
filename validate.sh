@@ -5,6 +5,7 @@ then
 fi
 
 inputpath=$1
+groundtruthpath=$2
 ./resize.sh $inputpath
 
 docker run --name cnn_synth_val -ti --rm \
@@ -15,4 +16,4 @@ docker run --name cnn_synth_val -ti --rm \
     /app/pyval.sh > validate_log.txt 2>/dev/null
 
 
-python eval.py "$(cat validate_log.txt | tail -n 1)" images/ground_truth_149.txt --ignorecase
+python3 eval.py "$(cat validate_log.txt | tail -n 1)" $groundtruthpath --ignorecase
