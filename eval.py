@@ -34,6 +34,8 @@ def get_character_error(word1,word2,ignorecase):
         return 0
     elif len(word1) == 0 and len(word2) > 0:
         return 1.0
+    elif len(word2) == 0 and len(word1) > 0:
+        return 1.0
     else:
         return levenshtein(word1,word2) / len(word2)
 
